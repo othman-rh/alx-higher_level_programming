@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# 101-nqueens.py
 """Solves the N-queens puzzle.
 
 Determines all possible solutions to placing N
@@ -50,10 +49,10 @@ def get_solution(board):
 def xout(board, row, col):
     """X out spots on a chessboard.
 
-    All spots where non-attacking queens can no
+All spots where non-attacking queens can no
     longer be played are X-ed out.
 
-    Args:
+Args:
         board (list): The current working chessboard.
         row (int): The row where a queen was last played.
         col (int): The column where a queen was last played.
@@ -103,7 +102,7 @@ def xout(board, row, col):
 def recursive_solve(board, row, queens, solutions):
     """Recursively solve an N-queens puzzle.
 
-    Args:
+Args:
         board (list): The current working chessboard.
         row (int): The current working row.
         queens (int): The current number of placed queens.
@@ -141,7 +140,3 @@ if __name__ == "__main__":
     solutions = recursive_solve(board, 0, 0, [])
     for sol in solutions:
         print(sol)
-    print("Found %d solutions" % len(solutions))
-
-    sys.exit(0)
-# End of 101-nqueens.py
